@@ -1,8 +1,10 @@
 .wrapper{
-    display: grid;
+    display: grid !important;
     grid-template-columns: 40% 30% 30%;
+    // Recommended to use fraction {fr} units instead of % / px any other unit
     grid-column-gap: 1em;
     grid-row-gap: 1em;
+    // grid gap = row gap + col gap 
     div{
         padding: 1em;
         background-color: lightgrey;
@@ -11,4 +13,20 @@
         background-color: grey !important;
     }
      
+}
+.wrapper-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    // Set auto height of 100 px
+    // grid-auto-rows: 100px;
+    // Adjusts the content
+    grid-auto-rows: minmax(100px,auto);
+    div{
+        padding: 1em;
+        background-color: lightgrey;
+    }
+    :nth-child(odd){
+        background-color: grey !important;
+    }
 }
