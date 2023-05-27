@@ -35,3 +35,26 @@
         grid-gap: 1em;
     }
 }
+.wrapper-3{
+    display: grid;
+    grid-template-columns: (1fr 2fr 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    justify-items: start; //puts the elements at the start of the grid col. Default = stretch, stretches till the col. end
+    align-items: center;
+    div{
+        padding: 1em;
+        background-color: lightgrey;
+    }
+    :nth-child(odd){
+        background-color: grey !important;
+    }
+    .box1{
+        justify-self: right;
+    }
+    .box2{
+        align-self: flex-end;
+    }.box3{
+        align-self: stretch;
+    }
+}
